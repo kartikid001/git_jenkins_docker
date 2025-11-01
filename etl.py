@@ -8,5 +8,5 @@ data ={
 }
 
 df = pd.DataFrame(data)
-st.text("ETL Process Status")
+st.text("Stream 2")
 st.write(df)
