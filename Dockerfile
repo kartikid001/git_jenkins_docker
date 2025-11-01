@@ -1,4 +1,4 @@
-RUN python:3.11-slim
+RUN python:3.14-slim
 RUN pip install streamlit
 WORKDIR /var
 COPY etl.py .
