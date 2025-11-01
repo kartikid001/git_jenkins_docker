@@ -8,7 +8,7 @@ pipeline {
         }
         stage("Cleanup") {
             steps{
-                bat "for /f "tokens=*" %%i in ('docker ps -aq') do docker rm -f %%i"
+                bat "for /f %%i in ('docker ps -aq') do docker rm -f %%i"
             }
         }
 
