@@ -6,6 +6,11 @@ pipeline {
                 git url: 'https://github.com/kartikid001/git_jenkins_docker.git', branch: 'main'
             }
         }
+        stage("Cleanup") {
+            steps{
+                bat "docker rm -f $(docker ps -q)"
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
