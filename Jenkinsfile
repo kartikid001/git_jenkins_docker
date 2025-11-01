@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build Docker Image'){
             steps{
-                bat "docker build -t GDJ1"
+                bat "docker build -t GDJ1 ."
             }
         }
         stage('CREATE CONTAINER'){
