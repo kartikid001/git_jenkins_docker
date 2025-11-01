@@ -19,7 +19,7 @@ pipeline {
         }
         stage('CREATE CONTAINER'){
             steps{
-                bat "docker run 8502:8502 GDJ1"
+                bat "docker run -d -p 8502:8502 GDJ1"
             }
         }
     }
