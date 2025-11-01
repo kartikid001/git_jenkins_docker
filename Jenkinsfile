@@ -1,20 +1,18 @@
 pipeline {
     agent any
-
-    environment {
-        python = 'C:\\Users\\kardm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe'
-    }
-
+    // environment {
+    //     python = 'C:\\Users\\kardm\\AppData\\Local\\Programs\\Python\\Python313\\python.exe'
+    // }
     stages {
         stage('Checkout Code') {
             steps {
-                checkout scm
+                git url: 'https://github.com/kartikid001/git_jenkins_docker.git', branch: 'main'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                bat "docker build -t gdj1 ."
+                bat "docker build -t gdj1"
             }
         }
 
